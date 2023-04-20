@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-photoSchema = mongoose.Schema({
+articleSchema = mongoose.Schema({
   date: {type:Date, required: true},
   title: {type:String, required: true},
   description: {type:String, required: true}
