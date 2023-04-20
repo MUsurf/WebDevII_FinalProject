@@ -3,5 +3,5 @@ export interface Officer{
   title: String,
   picture: String,
   email: String,
-  Description: String
+  description: String
 }
