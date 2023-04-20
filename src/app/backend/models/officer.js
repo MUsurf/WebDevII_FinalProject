@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
 
 officerSchema = mongoose.Schema({
-  name: {type:string, required: true },
-  title: {type:string, required: true},
-  picture: {type:string, required: true},
-  email: {type:string, required: true},
-  description: {type:string, required: true}
+  name: {type:String, required: true },
+  title: {type:String, required: true},
+  picture: {type:String, required: true},
+  email: {type:String, required: true},
+  description: {type:String, required: true}
 })
 
 module.exports = mongoose.model('Officer',officerSchema)
