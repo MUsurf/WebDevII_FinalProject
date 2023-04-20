@@ -20,7 +20,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
 
 
-app.get('/api/officers',(req,res,next)=>{
+app.get('/api/Officers',(req,res,next)=>{
   OfficerModel.find().then(documents=>{
     res.status(200).json({
       message: "This is fetched data",
