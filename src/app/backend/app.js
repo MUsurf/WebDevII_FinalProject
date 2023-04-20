@@ -6,6 +6,8 @@ const OfficerModel = require('./models/Officer')
 const ArticleModel = require('./models/Article')
 const PhotoModel = require('./models/Photo')
 
+
+
 mongoose.connect('mongodb+srv://SURF_Webmaster:2MQjduCM4U9q7eGx@mizzousurf.l9qioaf.mongodb.net/test')
   .then(()=>{
     console.log('Connected to database')
@@ -14,17 +16,37 @@ mongoose.connect('mongodb+srv://SURF_Webmaster:2MQjduCM4U9q7eGx@mizzousurf.l9qio
     console.log('connection error')
 })
 
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({extended:false}))
 
-app.get('/', (req, res) => {
-  const officers = new OfficerModel({
-    name: req.body.name,
-    title: req.body.title,
-    picture: req.body.picture,
-    email: req.body.email,
-    description: req.body.description
+
+app.get('/api/officers',(req,res,next)=>{
+  OfficerModel.find().then(documents=>{
+    res.status(200).json({
+      message: "This is fetched data",
+      posts: documents
+    })
   })
-
 })
+
+app.get('/api/articles',(req,res,next)=>{
+  ArticleModel.find().then(documents=>{
+    res.status(200).json({
+      message: "This is fetched data",
+      posts: documents
+    })
+  })
+})
+
+app.get('/api/photos',(req,res,next)=>{
+  PhotoModel.find().then(documents=>{
+    res.status(200).json({
+      message: "This is fetched data",
+      posts: documents
+    })
+  })
+})
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
