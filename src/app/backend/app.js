@@ -3,9 +3,9 @@ const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 
-const OfficerModel = require('./models/Officer')
-const ArticleModel = require('./models/Article')
-const PhotoModel = require('./models/Photo')
+const OfficerModel = require('./models/Officers')
+// const ArticleModel = require('./models/News')
+const PhotoModel = require('./models/Media')
 
 
 mongoose.connect('mongodb+srv://SURF_Webmaster:2MQjduCM4U9q7eGx@mizzousurf.l9qioaf.mongodb.net/SURF?retryWrites=true&w=majority')
@@ -27,6 +27,16 @@ app.get('/api/officers',(req,res,next)=>{
       Officers: documents
     })
   })
+  console.log("in route /api/officers")
+})
+
+app.get('/api/photos',(req,res,next)=>{
+  PhotoModel.find().then(documents=>{
+    res.status(200).json({
+      message: "This is fetched data",
+      photos: documents
+    })
+  })
 })
 
 // app.get('/api/articles',(req,res,next)=>{
@@ -37,17 +47,6 @@ app.get('/api/officers',(req,res,next)=>{
 //     })
 //   })
 // })
-
-// app.get('/api/photos',(req,res,next)=>{
-//   PhotoModel.find().then(documents=>{
-//     res.status(200).json({
-//       message: "This is fetched data",
-//       photos: documents
-//     })
-//   })
-// })
-
-
 
 
 // put in mongoose
