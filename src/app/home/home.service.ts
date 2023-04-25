@@ -13,14 +13,16 @@ export class HomeService {
 
   constructor(private http: HttpClient){}
 
-  getOfficers(){
+  getOfficers() {
     console.log("getOfficers called")
-    this.http.get<{message: String, Officers: Officer[]}>('http://localhost:3000/api/officers')
-    .subscribe((officerData) => {
-      this.officers = officerData.Officers;
-      console.log(this.officers);
-    })
-
-    return this.officers;
+    return this.http.get<{message: String, Officers: Officer[]}>('http://localhost:3000/api/officers')
+      .pipe(
+        map(officerData => {
+          this.officers = officerData.Officers;
+          console.log(this.officers);
+          return this.officers;
+        })
+      );
   }
+
 }

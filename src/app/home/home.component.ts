@@ -13,8 +13,13 @@ export class HomeComponent implements OnInit {
 
   constructor(public homeService: HomeService){}
 
-  ngOnInit(){
-      this.officers = this.homeService.getOfficers();
-      console.log(this.homeService.getOfficers());
+  ngOnInit() {
+    console.log("ngOnInit called")
+    this.homeService.getOfficers()
+      .subscribe(officers => {
+        this.officers = officers;
+        console.log(this.officers);
+      });
   }
+
 }
