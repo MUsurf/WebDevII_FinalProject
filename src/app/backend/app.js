@@ -18,6 +18,18 @@ mongoose.connect('mongodb+srv://SURF_Webmaster:2MQjduCM4U9q7eGx@mizzousurf.l9qio
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:false}))
+app.use((req, res, next)=>{
+  res.setHeader("Access-Control-Allow-Origin","*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.setHeader("Access-Control-Allow-Methods",
+  "GET, POST, PATCH, DELETE, OPTIONS"
+  );
+  console.log('Middleware');
+  next();
+})
 
 
 app.get('/api/officers',(req,res,next)=>{
@@ -51,5 +63,6 @@ app.get('/api/photos',(req,res,next)=>{
 
 // put in mongoose
 // just app.get
+
 
 module.exports = app;

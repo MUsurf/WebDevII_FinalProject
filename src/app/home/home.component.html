@@ -1,1 +1,16 @@
-<p>home works!</p>
+<h1>Officers</h1>
+
+<mat-card>
+  <mat-accordion multi="true" *ngIf="officers.length > 0">
+    <mat-expansion-panel *ngFor="let person of officers">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{person.name}}, {{person.title}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{person.description}}</p>
+      <p>{{person.email}}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <!-- <p class="info-text mat-body-1" style="color: white;" *ngIf="posts.length <= 0">{{randomString}}</p> -->
+</mat-card>
