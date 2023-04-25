@@ -14,10 +14,10 @@ export class MediaService {
 
   getMedia(){
     console.log("getMedia called")
-    return this.http.get<{message: String, Photos: Photo[]}>('http://localhost:3000/api/photos')
+    return this.http.get<{message: String, photos: Photo[]}>('http://localhost:3000/api/photos')
       .pipe(
         map( mediaData => {
-          this.media = mediaData.Photos;
+          this.media = mediaData.photos;
           console.log(this.media);
           return this.media;
         })
