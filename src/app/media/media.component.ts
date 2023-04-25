@@ -14,6 +14,12 @@ export class MediaComponent implements OnInit{
   constructor(public mediaService: MediaService){}
 
   ngOnInit(){
-    this.photos = this.mediaService.getMedia()
+    console.log("ngOnInit called")
+    this.mediaService.getMedia()
+      .subscribe(photos => {
+        this.photos = photos;
+        console.log(this.photos);
+      });
   }
+
 }
