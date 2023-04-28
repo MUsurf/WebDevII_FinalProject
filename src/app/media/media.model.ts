@@ -1,6 +1,7 @@
 export interface Photo{
-  picture: String,
+  id: string,
+  picture: string,
   date: Date,
-  description: String,
-  tags: Array<String>
+  description: string,
+  tags: Array<string>
 }
