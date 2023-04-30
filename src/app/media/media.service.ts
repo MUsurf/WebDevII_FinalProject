@@ -26,7 +26,7 @@ export class MediaService {
   }
 
 
-  uploadPhoto(name: string, picture: string, date: Date, description: string, tags: Array<string>){
+  uploadPhoto(picture: string, date: Date, description: string, tags: Array<string>){
     const photo: Photo = {id:"", picture: picture, date: date, description: description, tags: tags};
     this.http.post<{message:string, postId:string}>("http://localhost:3000/api/photos",photo)
     .subscribe((responseData)=>{

@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
 
 
 
@@ -31,7 +32,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HomeComponent,
     NewsComponent,
     MediaComponent,
-    CreateOfficerComponent
+    CreateOfficerComponent,
+    UploadPhotoComponent
   ],
   imports: [
     BrowserModule,

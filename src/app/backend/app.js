@@ -66,6 +66,22 @@ app.post("/api/officers",(req,res,next)=>{
   });
 });
 
+
+app.post("/api/photos",(req,res,next)=>{
+  const photo = new PhotoModel({
+    picture: req.body.picture,
+    date: req.body.date,
+    description: req.body.description,
+    tags: req.body.tags
+  })
+  photo.save()
+  console.log(photo)
+  res.status(201).json({
+    message: 'Photo Created Successfuly'
+  });
+});
+
+
 app.get('/api/articles',(req,res,next)=>{
   ArticleModel.find().then(documents=>{
     res.status(200).json({
