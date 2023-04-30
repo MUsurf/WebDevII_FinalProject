@@ -17,6 +17,7 @@ export class UploadPhotoComponent {
       return;
     }
 
+    form.value.tags = form.value.tags.split(' ');
     this.mediaService.uploadPhoto(form.value.picture, form.value.date, form.value.description, form.value.tags);
     form.resetForm();
 
