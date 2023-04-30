@@ -1,4 +1,15 @@
-<mat-grid-list cols="2" rowHeight="">
+<a class="link" href="upload-photo">Upload Photo</a>
+<!-- Small screen -->
+<mat-grid-list class="small-screen" cols="2" rowHeight="">
+  <mat-grid-tile *ngFor="let photo of photos">
+    <picture>
+      <source media='(min-width:0px)' srcset="{{photo.picture}}">
+      <img mat-card-image src="" alt="{{photo.description}}">
+    </picture>
+  </mat-grid-tile>
+</mat-grid-list>
+<!-- large screen -->
+<mat-grid-list class="large-screen" cols="3" rowHeight="">
   <mat-grid-tile *ngFor="let photo of photos">
     <picture>
       <source media='(min-width:0px)' srcset="{{photo.picture}}">
