@@ -5,6 +5,7 @@ import { NewsComponent } from './news/news.component';
 import { MediaComponent } from './media/media.component';
 import { CreateOfficerComponent } from './create-officer/create-officer.component';
 import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,9 @@ const routes: Routes = [
   },
   {
     path:'upload-photo',component:UploadPhotoComponent
+  },
+  {
+    path:'login',component:LoginComponent
   }
 ];
 

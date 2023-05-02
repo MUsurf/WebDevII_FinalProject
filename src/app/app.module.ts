@@ -20,6 +20,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -33,7 +34,8 @@ import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
     NewsComponent,
     MediaComponent,
     CreateOfficerComponent,
-    UploadPhotoComponent
+    UploadPhotoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
