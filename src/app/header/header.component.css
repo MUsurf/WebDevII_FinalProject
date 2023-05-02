@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'NCAA Missouri Tigers';
+  src: url('../../assets/fonts/NCAA_Missouri_Tigers.eot');
+  src:
+    url('../../assets/fonts/NCAA_Missouri_Tigers.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/NCAA_Missouri_Tigers.woff') format('woff'),
+    url('../../assets/fonts/NCAA_Missouri_Tigers.ttf')  format('truetype'),
+    url('../../assets/fonts/NCAA_Missouri_Tigers.svg#svgFontName') format('svg');
+}
+
+#headerTitle {
+  margin-top: 13px;
+  font-size: 39px;
+  text-align: center;
+  padding-right: 20px;
+}
+
+#headerTitle, .navbar-links {
+  font-family: 'NCAA Missouri Tigers', Arial;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  vertical-align:top;
+}
+
+.navbar-links:hover {
+  background: #333333;
+  height: auto;
+  margin-top: 0px;
+  border-top: 3px solid #F1B82D;
+  cursor: pointer;
+}
+
+span {
+  width: 25%;
+}

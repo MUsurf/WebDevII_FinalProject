@@ -51,14 +51,45 @@ app.get('/api/photos',(req,res,next)=>{
   })
 })
 
-// app.get('/api/articles',(req,res,next)=>{
-//   ArticleModel.find().then(documents=>{
-//     res.status(200).json({
-//       message: "This is fetched data",
-//       articles: documents
-//     })
-//   })
-// })
+app.post("/api/officers",(req,res,next)=>{
+  const officer = new OfficerModel({
+    name: req.body.name,
+    title: req.body.title,
+    email: req.body.email,
+    picture: req.body.picture,
+    description: req.body.description
+  })
+  officer.save()
+  console.log(officer)
+  res.status(201).json({
+    message: 'Officer Created Successfuly'
+  });
+});
+
+
+app.post("/api/photos",(req,res,next)=>{
+  const photo = new PhotoModel({
+    picture: req.body.picture,
+    date: req.body.date,
+    description: req.body.description,
+    tags: req.body.tags
+  })
+  photo.save()
+  console.log(photo)
+  res.status(201).json({
+    message: 'Photo Created Successfuly'
+  });
+});
+
+
+app.get('/api/articles',(req,res,next)=>{
+  ArticleModel.find().then(documents=>{
+    res.status(200).json({
+      message: "This is fetched data",
+      articles: documents
+    })
+  })
+})
 
 
 // put in mongoose

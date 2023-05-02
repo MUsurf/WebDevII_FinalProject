@@ -25,4 +25,14 @@ export class HomeService {
       );
   }
 
+
+  createOfficer(name: string, title: string, picture: string, email: string, description: string){
+    const officer: Officer = {id:"", name: name, picture: picture, title: title, email: email, description: description};
+    this.http.post<{message:string, postId:string}>("http://localhost:3000/api/officers",officer)
+    .subscribe((responseData)=>{
+      console.log(responseData.message);
+      this.officers.push(officer);
+    })
+  }
+
 }

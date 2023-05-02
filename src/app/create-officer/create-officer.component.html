@@ -1,0 +1,22 @@
+<mat-card>
+  <form (submit)="onCreateOfficer(postForm)" #postForm = "ngForm">
+    <mat-form-field >
+      <input matInput name="name" ngModel required placeholder="Officer Name">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput name="title" ngModel required placeholder="Officer Title">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput name="picture" ngModel required placeholder="Picture Path">
+    </mat-form-field>
+    <mat-form-field >
+      <input matInput name="email" ngModel required placeholder="email">
+    </mat-form-field>
+    <mat-form-field >
+      <textarea matInput name="description" rows="10" ngModel required placeholder="description"></textarea>
+    </mat-form-field>
+    <button
+     mat-raised-button
+     color="primary"
+    type="submit">Save post</button>
+  </form>

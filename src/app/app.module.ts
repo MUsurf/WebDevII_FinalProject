@@ -13,6 +13,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateOfficerComponent } from './create-officer/create-officer.component';
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -21,7 +31,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     HomeComponent,
     NewsComponent,
-    MediaComponent
+    MediaComponent,
+    CreateOfficerComponent,
+    UploadPhotoComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +42,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     MatCardModule,
     MatExpansionModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
