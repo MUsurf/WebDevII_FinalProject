@@ -2,10 +2,13 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+var passport = require('passport')
 
 const OfficerModel = require('./models/Officers')
 // const ArticleModel = require('./models/News')
 const PhotoModel = require('./models/Media')
+const User = require('./models/users') //?
+require('./config/passport'); //?
 
 
 mongoose.connect('mongodb+srv://SURF_Webmaster:2MQjduCM4U9q7eGx@mizzousurf.l9qioaf.mongodb.net/SURF?retryWrites=true&w=majority')
@@ -30,6 +33,8 @@ app.use((req, res, next)=>{
   console.log('Middleware');
   next();
 })
+app.use(passport.initialize()); //?
+// app.use('/api', routesApi); //?
 
 
 app.get('/api/officers',(req,res,next)=>{
@@ -52,6 +57,19 @@ app.get('/api/photos',(req,res,next)=>{
 })
 
 app.post("/api/officers",(req,res,next)=>{
+  if (!req.payload._id) {
+    res.status(401).json({
+      "message" : "UnauthorizedError: private profile"
+    });
+  } else {
+    // Otherwise continue
+    User
+      .findById(req.payload._id)
+      .exec(function(err, user) {
+        res.status(200).json(user);
+      });
+  }
+
   const officer = new OfficerModel({
     name: req.body.name,
     title: req.body.title,
@@ -90,6 +108,49 @@ app.get('/api/articles',(req,res,next)=>{
     })
   })
 })
+
+//Need to require some kind of secred code. Don't want just anyone to be able to make an account
+app.post('/api/register',(req,res,next)=>{
+  var user = new User();
+
+  user.username = req.body.name;
+  user.setPassword(req.body.password);
+
+  user.save(function(err) {
+    var token;
+    token = user.generateJwt();
+    res.status(200);
+    res.json({
+      "token" : token
+    });
+  });
+})
+
+app.post('/api/login',(req,res,next)=>{
+  passport.authenticate('local', function(err, user, info){
+    var token;
+
+    // If Passport throws/catches an error
+    if (err) {
+      res.status(404).json(err);
+      return;
+    }
+
+    // If a user is found
+    if(user){
+      token = user.generateJwt();
+      res.status(200);
+      res.json({
+        "token" : token
+      });
+    } else {
+      // If user is not found
+      res.status(401).json(info);
+    }
+  })(req, res);
+})
+
+
 
 
 // put in mongoose

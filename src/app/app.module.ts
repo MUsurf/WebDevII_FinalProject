@@ -21,6 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
 import { LoginComponent } from './login/login.component';
+import { AuthenticationService } from './authentication.service';
 
 
 
@@ -51,7 +52,7 @@ import { LoginComponent } from './login/login.component';
     MatIconModule,
     MatGridListModule
   ],
-  providers: [],
+  providers: [AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
