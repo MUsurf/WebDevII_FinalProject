@@ -20,6 +20,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
+import { FilterByTagComponent } from './filter-by-tag/filter-by-tag.component';
+import {MatChipsModule} from '@angular/material/chips';
 
 
 
@@ -33,7 +35,8 @@ import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
     NewsComponent,
     MediaComponent,
     CreateOfficerComponent,
-    UploadPhotoComponent
+    UploadPhotoComponent,
+    FilterByTagComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
     FormsModule,
     MatInputModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
