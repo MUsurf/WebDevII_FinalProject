@@ -5,11 +5,11 @@ version: '3.9'
 
 services:
   angular:
-    build: ./angular
+    build: ./frontend
     ports:
       - 4200:4200
   node:
-    build: ./node
+    build: ./backend
     ports:
       - 3000:3000
     depends_on:

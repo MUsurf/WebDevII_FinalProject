@@ -3,7 +3,7 @@ FROM node:18
 
 WORKDIR /usr/src/app
 
-COPY ..package.json /usr/src/app
+COPY . .
 
 # RUN npm cache clean
 
@@ -18,4 +18,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist/angular-directives /usr/share/nginx/html
 
 EXPOSE 4200
-CMD ["nodemon", "server.js"]
+CMD ["ng", "serve"]
