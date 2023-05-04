@@ -9,5 +9,8 @@
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

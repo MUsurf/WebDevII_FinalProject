@@ -18,4 +18,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist/angular-app /usr/share/nginx/html
 
 # EXPOSE 4200
-# CMD ["npm","start"]
+# CMD ["ng", "serve"]
