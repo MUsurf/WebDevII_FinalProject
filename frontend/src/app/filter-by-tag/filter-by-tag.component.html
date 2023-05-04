@@ -1,0 +1,14 @@
+<div>
+  <mat-chip-listbox aria-label="Selected Tags">
+    <span *ngFor="let tag of selectedTags" class="selected-tag">
+      <mat-chip color="accent">{{tag}}</mat-chip>
+      <button mat-icon-button aria-label="Remove tag" (click)="onTagRemoved(tag)">
+        <mat-icon>close</mat-icon>
+      </button>
+    </span>
+  </mat-chip-listbox>
+  <select (change)="onTagSelected($event.target)" [value]="selectedValue">
+    <option value="">All Tags</option>
+    <option *ngFor="let tag of tags" [value]="tag">{{ tag }}</option>
+  </select>
+</div>

@@ -11,7 +11,7 @@ import { Photo } from './media.model';
 
 export class MediaComponent {
 
-
+  originalPhotos: Photo[] = [];
   photos: Photo[] = [];
 
   constructor(public mediaService: MediaService){}
@@ -21,8 +21,15 @@ export class MediaComponent {
     this.mediaService.getPhotos()
       .subscribe(photos => {
         this.photos = photos;
-        console.log(this.photos);
+        this.originalPhotos = photos
+        console.log("Photos: " + this.photos);
+        console.log("original photos: " + this.originalPhotos)
+
       });
+  }
+
+  onFilteredPhotos(filteredPhotos: Photo[]) {
+    this.photos = filteredPhotos;
   }
 
 }

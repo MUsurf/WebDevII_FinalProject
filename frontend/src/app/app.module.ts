@@ -20,13 +20,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { FilterByTagComponent } from './filter-by-tag/filter-by-tag.component';
+import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonModule} from '@angular/material/button';
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -37,7 +33,8 @@ import {MatButtonModule} from '@angular/material/button';
     NewsComponent,
     MediaComponent,
     CreateOfficerComponent,
-    UploadPhotoComponent
+    UploadPhotoComponent,
+    FilterByTagComponent
   ],
   imports: [
     BrowserModule,
@@ -52,8 +49,7 @@ import {MatButtonModule} from '@angular/material/button';
     MatInputModule,
     MatIconModule,
     MatGridListModule,
-    MatSidenavModule,
-    FlexLayoutModule,
+    MatChipsModule,
     MatButtonModule
   ],
   providers: [],
