@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
 import { MediaComponent } from './media/media.component';
-import { CreateOfficerComponent } from './create-officer/create-officer.component';
-import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
+import { SettingsComponent } from './settings/settings.component';
 
 const routes: Routes = [
   {
@@ -17,10 +16,7 @@ const routes: Routes = [
     path:'media',component:MediaComponent
   },
   {
-    path:'create-officer',component:CreateOfficerComponent
-  },
-  {
-    path:'upload-photo',component:UploadPhotoComponent
+    path:'settings',component:SettingsComponent
   }
 ];
 

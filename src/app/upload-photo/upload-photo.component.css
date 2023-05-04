@@ -1,6 +1,16 @@
+@font-face {
+  font-family: 'NCAA Missouri Tigers';
+  src: url('../../assets/fonts/NCAA_Missouri_Tigers.eot');
+  src:
+    url('../../assets/fonts/NCAA_Missouri_Tigers.eot?#iefix') format('embedded-opentype'),
+    url('../../assets/fonts/NCAA_Missouri_Tigers.woff') format('woff'),
+    url('../../assets/fonts/NCAA_Missouri_Tigers.ttf')  format('truetype'),
+    url('../../assets/fonts/NCAA_Missouri_Tigers.svg#svgFontName') format('svg');
+}
+
 mat-card {
   display: inline-block;
-  width: 60%;
+  width: 50%;
   margin: auto;
 }
 

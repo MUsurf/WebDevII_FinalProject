@@ -1,15 +1,16 @@
 <mat-card>
+  <mat-card-title>Upload Photos</mat-card-title>
   <form (submit)="onUploadPhoto(postForm)" #postForm = "ngForm">
-    <mat-form-field >
+    <mat-form-field>
       <input matInput name="picture" ngModel required placeholder="Name of picture">
     </mat-form-field>
-    <mat-form-field >
+    <mat-form-field>
       <input matInput name="date" ngModel required placeholder="Date">
     </mat-form-field>
-    <mat-form-field >
+    <mat-form-field>
       <input matInput name="description" ngModel required placeholder="Description">
     </mat-form-field>
-    <mat-form-field >
+    <mat-form-field>
       <textarea matInput name="tags" rows="10" ngModel required placeholder="Tags (split by space)"></textarea>
     </mat-form-field>
     <button
