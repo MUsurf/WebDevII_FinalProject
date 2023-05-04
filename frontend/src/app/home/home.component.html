@@ -1,0 +1,27 @@
+<h1 class="title">Meet the team</h1>
+
+<mat-card id="officer-card">
+<p class="title">Officers</p>
+<div class="card-container" *ngIf="officers.length > 0">
+    <mat-card class="card" *ngFor="let person of officers">
+      <mat-card-title-group>
+        <mat-card-title>
+          {{person.name}}
+        </mat-card-title>
+        <mat-card-subtitle>
+          {{person.title}}
+        </mat-card-subtitle>
+      </mat-card-title-group>
+      <img mat-card-lg-image src={{person.picture}}>
+
+
+      <mat-card-content>
+        {{person.description}}
+      </mat-card-content>
+      <mat-card-footer>
+        Contact: {{person.email}}
+      </mat-card-footer>
+    </mat-card>
+  <!-- <p class="info-text mat-body-1" style="color: white;" *ngIf="posts.length <= 0">{{randomString}}</p> -->
+</div>
+</mat-card>

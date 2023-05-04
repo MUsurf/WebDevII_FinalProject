@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
-import { MediaComponent } from './media/media.component';
+import { MediaComponent } from '../app/media/media.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
@@ -22,9 +22,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
 import { FilterByTagComponent } from './filter-by-tag/filter-by-tag.component';
 import {MatChipsModule} from '@angular/material/chips';
-
-
-
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -51,7 +49,8 @@ import {MatChipsModule} from '@angular/material/chips';
     MatInputModule,
     MatIconModule,
     MatGridListModule,
-    MatChipsModule
+    MatChipsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
