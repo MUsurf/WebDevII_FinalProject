@@ -6,6 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  isToggled = false;
 
-
+  setToggle(){
+    if(this.isToggled){
+      this.isToggled = false;
+      // console.log(this.isToggled);
+    }
+    else if(!this.isToggled){
+      this.isToggled = true;
+      // console.log(this.isToggled);
+    }
+  }
 }
