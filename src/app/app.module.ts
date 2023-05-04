@@ -20,6 +20,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatButtonModule} from '@angular/material/button';
+
 
 
 
@@ -47,7 +51,10 @@ import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
     FormsModule,
     MatInputModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSidenavModule,
+    FlexLayoutModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
