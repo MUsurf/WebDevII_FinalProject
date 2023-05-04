@@ -1,0 +1,16 @@
+#copied from 'YAML for Mean stack' slide
+#'Docker Compose YAML' slides
+
+version: '3.9'
+
+services:
+  angular:
+    build: ./frontend
+    ports:
+      - 4200:4200
+  node:
+    build: ./backend
+    ports:
+      - 3000:3000
+    environment:
+      MONGO_URL: mongodb+srv://SURF_Webmaster:2MQjduCM4U9q7eGx@mizzousurf.l9qioaf.mongodb.net/SURF?retryWrites=true&w=majority
