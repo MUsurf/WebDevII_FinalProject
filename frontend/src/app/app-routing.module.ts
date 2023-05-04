@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NewsComponent } from './news/news.component';
-import { MediaComponent } from './media/media.component';
+import { MediaComponent } from '../../../src/app/media/media.component';
 import { CreateOfficerComponent } from './create-officer/create-officer.component';
 import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
 

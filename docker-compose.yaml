@@ -5,20 +5,12 @@ version: '3.9'
 
 services:
   angular:
-    build: ./angular
+    build: ./frontend
     ports:
       - 4200:4200
   node:
-    build: ./node
+    build: ./backend
     ports:
       - 3000:3000
-    depends_on:
-      - mongo
     environment:
       MONGO_URL: mongodb+srv://SURF_Webmaster:2MQjduCM4U9q7eGx@mizzousurf.l9qioaf.mongodb.net/SURF?retryWrites=true&w=majority
-  mongo:
-    image: mongo:5.0.2
-    ports:
-      - 27017:27017
-    volumes:
-      - ./mongo-data:/data/db
