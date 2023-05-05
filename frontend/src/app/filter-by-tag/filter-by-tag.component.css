@@ -1,0 +1,31 @@
+.search-box {
+  width: 25%;
+}
+
+.tag-list {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.selected-tags {
+  width: fit-content;
+  margin: auto;
+}
+
+.selected-tags div {
+  width: fit-content;
+}
+
+mat-chip {
+  text-align: center;
+}
+
+@media screen and (max-width: 800px){
+  .search-box{
+    width: 100%;
+  }
+
+  .tag-list {
+    margin-top: 0px;
+  }
+}

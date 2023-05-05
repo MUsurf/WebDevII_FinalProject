@@ -23,6 +23,8 @@ import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
 import { FilterByTagComponent } from './filter-by-tag/filter-by-tag.component';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import {MatButtonModule} from '@angular/material/button';
     MatIconModule,
     MatGridListModule,
     MatChipsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatSelectModule,
+    MatAutocompleteModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,15 +1,22 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Photo } from '../media/media.model';
+// import {COMMA, ENTER} from '@angular/cdk/keycodes';
+// import { FormControl } from '@angular/forms';
+// import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-filter-by-tag',
-  templateUrl: './filter-by-tag.component.html'
+  templateUrl: './filter-by-tag.component.html',
+  styleUrls: ['./filter-by-tag.component.css']
 })
 export class FilterByTagComponent {
   @Input() photos!: Photo[];
   @Input() originalPhotos!: Photo[]; // Add ! to indicate that the property will be initialized later
   @Output() filteredPhotos = new EventEmitter<Photo[]>();
 
+  // separatorKeysCodes: number[] = [ENTER, COMMA];
+  // tagCtrl = new FormControl('');
+  // filteredTags: Observable<string[]>;
   tags: string[] = [];
   selectedTags: string[] = [];
 
