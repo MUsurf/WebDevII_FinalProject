@@ -1,0 +1,45 @@
+<!-- <form>
+  <mat-form-field class="search-box" appearance="fill">
+    <mat-label>Search by tag</mat-label>
+    <mat-chip-grid #chipGrid aria-label="Tag selection">
+      <mat-chip-row *ngFor="let tag of selectedTags" (removed)="onTagRemoved(tag)">
+        {{tag}}
+        <button matChipRemove [attr.aria-label]="'remove ' + tag">
+          <mat-icon>cancel</mat-icon>
+        </button>
+      </mat-chip-row>
+    </mat-chip-grid>
+    <input placeholder="Search Tags..." #tagInput [formControl]="tagCtrl"
+      [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
+      [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+      (matChipInputTokenEnd)="add($event)"/>
+    <mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+      <mat-option *ngFor="let tag of tags | async" [value]="selectedValue">
+        {{tag}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form> -->
+
+<div class="tag-list">
+  <!-- <mat-form-field class="search-box"> -->
+    <!-- <mat-label>Search by tag</mat-label> -->
+    <select (change)="onTagSelected($event.target)" [value]="selectedValue">
+      <option value="">All Tags</option>
+      <option *ngFor="let tag of tags" [value]="tag">{{ tag }}</option>
+    </select>
+  <!-- </mat-form-field> -->
+
+
+
+  <mat-chip-listbox aria-label="Selected Tags" class="selected-tags">
+    <div *ngFor="let tag of selectedTags" class="selected-tag">
+      <mat-chip-option color="accent">
+        <span>{{tag}}</span>
+        <button mat-icon-button aria-label="Remove tag" (click)="onTagRemoved(tag)">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-chip-option>
+    </div>
+  </mat-chip-listbox>
+</div>

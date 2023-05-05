@@ -1,5 +1,6 @@
 <!-- <a class="link" href="upload-photo">Upload Photo</a> -->
 <!-- Small screen -->
+<app-filter-by-tag class="small-screen" [photos]="photos" [originalPhotos]="originalPhotos" (filteredPhotos)="onFilteredPhotos($event)"></app-filter-by-tag>
 <mat-grid-list class="small-screen" cols="2" rowHeight="">
   <mat-grid-tile *ngFor="let photo of photos">
     <picture>
@@ -9,6 +10,7 @@
   </mat-grid-tile>
 </mat-grid-list>
 <!-- medium screen -->
+<app-filter-by-tag class="medium-screen" [photos]="photos" [originalPhotos]="originalPhotos" (filteredPhotos)="onFilteredPhotos($event)"></app-filter-by-tag>
 <mat-grid-list class="medium-screen" cols="3" rowHeight="">
   <mat-grid-tile *ngFor="let photo of photos">
     <picture>
@@ -18,6 +20,7 @@
   </mat-grid-tile>
 </mat-grid-list>
 <!-- large screen -->
+<app-filter-by-tag class="large-screen" [photos]="photos" [originalPhotos]="originalPhotos" (filteredPhotos)="onFilteredPhotos($event)"></app-filter-by-tag>
 <mat-grid-list class="large-screen" cols="4" rowHeight="">
   <mat-grid-tile *ngFor="let photo of photos">
     <picture>
