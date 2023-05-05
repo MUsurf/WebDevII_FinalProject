@@ -50,7 +50,8 @@ mat-card-subtitle{
 }
 
 #officer-card{
-    background-color: gray
+    background-color: gray;
+    padding-bottom: 2.5rem;
 }
 
 img {

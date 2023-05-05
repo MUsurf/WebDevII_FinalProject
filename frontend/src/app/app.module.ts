@@ -21,9 +21,6 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { UploadPhotoComponent } from './upload-photo/upload-photo.component';
 import { SettingsComponent } from './settings/settings.component'
-
-
-
 import { FilterByTagComponent } from './filter-by-tag/filter-by-tag.component';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatButtonModule} from '@angular/material/button';
