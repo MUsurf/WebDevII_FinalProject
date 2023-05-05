@@ -1,0 +1,14 @@
+div{
+  display: flex;
+  padding-bottom: 2.5rem;
+}
+
+.photo-container{
+  width: 50%;
+  padding: 10px;
+}
+
+.officer-container{
+  width: 50%;
+  padding: 10px;
+}

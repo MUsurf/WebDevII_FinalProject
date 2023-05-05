@@ -6,9 +6,9 @@
     </div>
     <div class="link-container">
       <a href="" class="navbar-links">Home</a>
-      <a href="news" class="navbar-links">News</a>
+      <!-- <a href="news" class="navbar-links">News</a> -->
       <a href="media" class="navbar-links">Media</a>
-      <a href="create-officer" class="navbar-links">Create Officer</a>
+      <a href="settings" class="navbar-links">Settings</a>
       <button mat-icon-button class="hamburger" (click)="setToggle()">
         <mat-icon>menu</mat-icon>
       </button>
@@ -17,13 +17,13 @@
   <mat-toolbar-row [ngClass]="isToggled ? 'visible' : 'invisible'">
     <a href="" class="navbar-links">Home</a>
   </mat-toolbar-row>
-  <mat-toolbar-row [ngClass]="isToggled ? 'visible' : 'invisible'">
+  <!-- <mat-toolbar-row [ngClass]="isToggled ? 'visible' : 'invisible'">
     <a href="news" class="navbar-links">News</a>
-  </mat-toolbar-row>
+  </mat-toolbar-row> -->
   <mat-toolbar-row [ngClass]="isToggled ? 'visible' : 'invisible'">
     <a href="media" class="navbar-links">Media</a>
   </mat-toolbar-row>
   <mat-toolbar-row [ngClass]="isToggled ? 'visible' : 'invisible'">
-    <a href="create-officer" class="navbar-links">Create Officer</a>
+    <a href="settings" class="navbar-links">Settings</a>
   </mat-toolbar-row>
 </mat-toolbar>
